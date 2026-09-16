@@ -44,10 +44,20 @@ def prepare_rfdiffusion2_execution(job_dir: Path, config: EnztraConfig) -> dict:
     if not input_pdb.is_file():
         raise FileNotFoundError(f"cleaned RFdiffusion2 input is missing: {input_pdb}")
     positions = [_position(token) for token in request["functional_site_residues"]]
-    # In guidepost mode RFdiffusion2 discards the individual inter-motif gaps
-    # and retains their combined scaffold length. Put the requested total
-    # length in one scaffold segment so ranges such as 150-180 remain valid.
-    contigs: list[str] = [request["design_length"]]
+    # In guidepost mode, the requested design length describes the generated
+    # protein scaffold, but ContigMap's compatibility check also counts every
+    # protein guidepost. Offset the compatibility range by that guidepost count
+    # while retaining the requested scaffold length in the contig itself.
+    design_length = request["design_length"]
+    exact_length = "-" not in design_length
+    scaffold_length = f"{design_length}-{design_length}" if exact_length else design_length
+    if exact_length:
+        compatible_length = str(int(design_length) + len(positions))
+        length_override = f'"{compatible_length}"'
+    else:
+        minimum, maximum = (int(value) for value in design_length.split("-"))
+        length_override = f"{minimum + len(positions)}-{maximum + len(positions)}"
+    contigs: list[str] = [scaffold_length]
     contigs.extend(f"{position}-{position[1:]}" for position in positions)
     atom_map = {
         position.replace(":", ""): ",".join(atoms)
@@ -81,7 +91,7 @@ def prepare_rfdiffusion2_execution(job_dir: Path, config: EnztraConfig) -> dict:
         # string. Without the inner quotes Hydra creates one list item per
         # segment and ContigMap silently reads only the requested length.
         f'contigmap.contigs=["{",".join(contigs)}"]',
-        f"contigmap.length={request['design_length']}",
+        f"contigmap.length={length_override}",
         "inference.contig_as_guidepost=True",
         f"contigmap.contig_atoms={atom_literal}",
         "inference.write_trajectory=True",

@@ -10,7 +10,7 @@ from enztra.execution import (
 )
 
 
-def _prepared_job(tmp_path):
+def _prepared_job(tmp_path, design_length="150-180"):
     pdb = "\n".join(
         [
             "ATOM      1  CA  HIS A  17      10.000  20.000  30.000  1.00 20.00           C",
@@ -27,7 +27,7 @@ def _prepared_job(tmp_path):
             "functional_site_residues": "A:H17",
             "functional_site_atoms": {"A:17": "CA,ND1"},
             "atom_preservation_mode": "all_heavy", "protein_chain": "A",
-            "design_length": "150-180", "backbone_count": 3,
+            "design_length": design_length, "backbone_count": 3,
             "sequences_per_backbone": 4,
         }
     )
@@ -51,9 +51,16 @@ def test_execution_plan_uses_validated_workload(tmp_path):
     assert "inference.num_designs=3" in plan["command"]
     assert "inference.ligand=LIG" in plan["command"]
     assert 'contigmap.contigs=["150-180,A17-17"]' in plan["command"]
-    assert "contigmap.length=150-180" in plan["command"]
+    assert "contigmap.length=151-181" in plan["command"]
     assert 'contigmap.contig_atoms={A17:"CA,ND1"}' in plan["command"]
     assert "MKL_THREADING_LAYER=GNU" in plan["command"]
+
+
+def test_execution_plan_preserves_exact_length_for_rfdiffusion2(tmp_path):
+    job, config = _prepared_job(tmp_path, design_length="410")
+    plan = prepare_rfdiffusion2_execution(job, config)
+    assert 'contigmap.contigs=["410-410,A17-17"]' in plan["command"]
+    assert 'contigmap.length="411"' in plan["command"]
 
 
 def test_successful_execution_updates_status(tmp_path):

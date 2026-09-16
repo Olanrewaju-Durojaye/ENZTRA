@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1 — 2026-09-16
+
+- Fix RFdiffusion2 length construction in protein-guidepost mode by retaining
+  the requested scaffold span in the contig and offsetting ContigMap's length
+  compatibility constraint by the number of functional-residue guideposts.
+- Quote exact Hydra length scalars and add regression coverage for both exact
+  lengths and ranges, preventing incompatible-contig sampling loops.
+
 ## 1.0.0 — 2026-09-16
 
 - Promote ENZTRA to its first stable release after the exact native

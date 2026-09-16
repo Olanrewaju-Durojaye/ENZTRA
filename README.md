@@ -67,7 +67,9 @@ the first local-tool integration layer:
 - consolidated rankings, QC flags, and publication/reproducibility exports.
 - controlled-pilot preflight and planned-versus-observed integration reports.
 
-Version `1.0.0` is the first stable ENZTRA release. Its native qualification
+Version `1.0.1` is the current stable ENZTRA release. It retains the native
+v1.0.0 qualification and corrects RFdiffusion2 length accounting when protein
+guideposts are present. The original native qualification
 run completed the exact 50-backbone × 10-sequence plan: all 500 sequences
 reached kinetic evaluation, 14 strict survivors reached Boltz-2 structural
 evaluation, all publication exports completed, and no integration check

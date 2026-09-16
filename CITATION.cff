@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Durojaye
     given-names: Olanrewaju Ayodeji
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-09-16
 license: MIT
 abstract: >-
