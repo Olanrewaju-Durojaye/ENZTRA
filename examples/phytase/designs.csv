@@ -1,0 +1,6 @@
+design_id,sequence,kcat_s,km_mm,kcat_uncertainty,km_uncertainty
+design_001,ACDEFGHIKLMNPQRSTVWY,400.0,0.100,0.0,0.10
+design_002,ACDEFGHIKLMNPQRSTVWA,420.0,0.250,0.0,0.12
+design_003,ACDEFGHIKLMNPQRSTVWC,250.0,0.090,0.0,0.11
+design_004,ACDEFGHIKLMNPQRSTVWD,500.0,0.070,0.0,0.09
+

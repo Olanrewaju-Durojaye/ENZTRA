@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "release": "1.0.0",
+  "qualification_execution_version": "1.0.0rc1",
+  "reporting_fix_versions": [
+    "1.0.0rc2",
+    "1.0.0rc3"
+  ],
+  "job_id": "release-500",
+  "qualification_status": "passed",
+  "exact_500_sequence_plan": true,
+  "github_release_ready": true,
+  "planned": {
+    "backbones": 50,
+    "sequences_per_backbone": 10,
+    "sequences": 500
+  },
+  "observed": {
+    "kinetic_candidates": 500,
+    "strict_survivors": 14,
+    "structurally_ranked": 14
+  },
+  "failed_checks": [],
+  "note": "rc2 and rc3 changed reporting labels only; model execution and scientific calculations were not changed."
+}

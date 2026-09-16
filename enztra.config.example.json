@@ -1,0 +1,13 @@
+{
+  "conda_executable": "conda",
+  "apptainer_executable": "apptainer",
+  "rfdiffusion2_root": "~/Applications/RFdiffusion2",
+  "dlkcat_root": "~/Applications/DLKcat",
+  "catpred_root": "~/Applications/catpred_pipeline/CatPred",
+  "catpred_data_root": "~/Applications/catpred_pipeline/data",
+  "catpred_results_root": "~/Applications/catpred_pipeline/results",
+  "boltz_cache": "~/.boltz",
+  "dlkcat_environment": "dlkcat",
+  "catpred_environment": "catpred",
+  "boltz2_environment": "boltz2"
+}

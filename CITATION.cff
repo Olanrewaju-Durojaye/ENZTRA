@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use ENZTRA, please cite the software release and associated publication."
+title: "ENZTRA: Enzyme Redesign and Triage Automation"
+type: software
+authors:
+  - family-names: Durojaye
+    given-names: Olanrewaju Ayodeji
+version: 1.0.0
+date-released: 2026-09-16
+license: MIT
+abstract: >-
+  A reference-guided workflow connecting protein-backbone generation,
+  ligand-aware sequence design, kinetic triage, structural validation,
+  quality control, and publication exports.

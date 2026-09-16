@@ -1,0 +1,13 @@
+{
+  "enzyme_id": "1DKP_A",
+  "substrate_id": "IHP",
+  "kcat_s": 314.0739,
+  "km_mm": 0.181112,
+  "provenance": {
+    "kcat_model": "DLKcat",
+    "km_model": "CatPred",
+    "sequence_length": 410,
+    "note": "Illustrative ENZTRA installation test; predictions are not experimental measurements."
+  }
+}
+

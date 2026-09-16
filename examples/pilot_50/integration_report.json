@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "enztra_version": "0.13.0rc1",
+  "generated_at": "2026-09-16T01:38:35.862593+00:00",
+  "job_id": "pilot-50",
+  "workflow_status": "completed",
+  "planned": {
+    "backbones": 10,
+    "sequences": 50
+  },
+  "observed": {
+    "completed_backbones": 10,
+    "sequences": 50,
+    "kinetic_candidates": 50,
+    "strict_survivors": 2,
+    "structurally_ranked": 2
+  },
+  "stage_duration_seconds": {
+    "rfdiffusion2": 4653.946,
+    "ligandmpnn": 22.463,
+    "kinetics": 15.342,
+    "boltz2": 39.174,
+    "publication": 0.611
+  },
+  "integration_checks": [
+    {
+      "name": "backbone_count",
+      "expected": 10,
+      "observed": 10,
+      "ok": true
+    },
+    {
+      "name": "sequence_count",
+      "expected": 50,
+      "observed": 50,
+      "ok": true
+    },
+    {
+      "name": "kinetic_candidate_count",
+      "expected": 50,
+      "observed": 50,
+      "ok": true
+    },
+    {
+      "name": "structural_survivor_count",
+      "expected": 2,
+      "observed": 2,
+      "ok": true
+    },
+    {
+      "name": "publication_candidate_count",
+      "expected": 50,
+      "observed": 50,
+      "ok": true
+    }
+  ],
+  "failed_checks": [],
+  "pilot_status": "passed"
+}

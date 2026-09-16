@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ENZTRA — kinetic triage</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/boltz.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="mark">E</span><div><strong>ENZTRA</strong><small>enzyme redesign &amp; triage</small></div></div>
+    <div class="status"><i></i> Local analysis</div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">KINETIC SELECTION</p><h1>Find designs that improve both sides of catalysis.</h1><p>Only candidates with higher kcat and lower Km than the reference cross ENZTRA’s strict gate.</p></div>
+      <label>Completed job<select id="job-select"><option>Loading jobs…</option></select></label>
+    </section>
+    <section id="empty" class="empty" hidden>No completed jobs were found. Run <code>enztra kinetics</code>, then refresh.</section>
+    <div id="dashboard" hidden>
+      <section class="cards">
+        <article><span>REFERENCE</span><strong id="reference-id">—</strong><small id="substrate">—</small></article>
+        <article><span>DESIGNS</span><strong id="design-count">—</strong><small>evaluated candidates</small></article>
+        <article class="accent"><span>STRICT SURVIVORS</span><strong id="survivor-count">—</strong><small>queued for Boltz-2</small></article>
+        <article><span>REFERENCE EFFICIENCY</span><strong id="efficiency">—</strong><small>s⁻¹ mM⁻¹</small></article>
+      </section>
+      <section class="workspace">
+        <article class="panel chart-panel">
+          <div class="panel-head"><div><p class="eyebrow">DECISION MAP</p><h2>Km versus kcat</h2></div><label class="toggle"><input id="log-scale" type="checkbox"> Log axes</label></div>
+          <div class="legend"><span><i class="dot reference"></i>Reference</span><span><i class="dot survivor"></i>Survivor</span><span><i class="dot rejected"></i>Rejected</span></div>
+          <div class="plot-wrap"><svg id="plot" role="img" aria-label="Kinetic selection scatter plot"></svg><div id="tooltip" class="tooltip" hidden></div></div>
+          <p class="caption">The shaded upper-left region requires <b>Km &lt; reference</b> and <b>kcat &gt; reference</b>. Boundary equality is rejected.</p>
+        </article>
+        <aside class="panel queue"><p class="eyebrow">NEXT STAGE</p><h2>Boltz-2 queue</h2><div id="queue"></div></aside>
+      </section>
+      <section class="panel table-panel">
+        <div class="panel-head"><div><p class="eyebrow">ALL CANDIDATES</p><h2>Selection details</h2></div><input id="search" type="search" placeholder="Filter by design ID"></div>
+        <div class="table-scroll"><table><thead><tr><th>Design</th><th>kcat (s⁻¹)</th><th>Km (mM)</th><th>Efficiency</th><th>kcat fold</th><th>Km fold</th><th>Decision</th></tr></thead><tbody id="rows"></tbody></table></div>
+      </section>
+      <section id="boltz-panel" class="panel table-panel" hidden>
+        <div class="panel-head"><div><p class="eyebrow">STRUCTURAL VALIDATION</p><h2>Boltz-2 best models</h2></div><span id="boltz-mode" class="mode-badge"></span></div>
+        <p class="caption">Automatically selected by confidence score, then ligand ipTM and complex pLDDT. These values estimate structural reliability, not catalytic activity.</p>
+        <div class="boltz-cards">
+          <div><span>VALIDATED DESIGNS</span><strong id="boltz-designs">—</strong></div>
+          <div><span>SAMPLES PER DESIGN</span><strong id="boltz-samples">—</strong></div>
+          <div><span>TOP CONFIDENCE</span><strong id="boltz-top-score">—</strong></div>
+        </div>
+        <div class="table-scroll"><table><thead><tr><th>Structural rank</th><th>Design</th><th>Model</th><th>Confidence</th><th>Ligand ipTM</th><th>Complex pLDDT</th><th>Kinetic rank</th><th>Structure file</th></tr></thead><tbody id="boltz-rows"></tbody></table></div>
+      </section>
+    </div>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
