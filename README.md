@@ -17,6 +17,12 @@ redistributing their source code or model weights:
 > ENZTRA predictions are computational hypotheses. They do not establish
 > catalytic activity and must be validated experimentally.
 
+## Step-by-step tutorial
+
+A complete beginner-friendly installation and reproduction guide is available in
+[TUTORIAL.md](TUTORIAL.md). It includes a preliminary smoke test and the exact
+input conditions used for the `release-500` and `release-500b` demonstrations.
+
 ## Strict selection rule
 
 For reference values `kcat_ref` and `Km_ref`, a design survives only when:
