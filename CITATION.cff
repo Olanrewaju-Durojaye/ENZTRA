@@ -3,8 +3,7 @@ message: "If you use ENZTRA, please cite the software release and associated pub
 title: "ENZTRA: Enzyme Redesign and Triage Automation"
 type: software
 authors:
-  - family-names: Durojaye
-    given-names: Olanrewaju Ayodeji
+  - Olanrewaju Ayodeji Durojaye, Salaheddine EL HADAD, Rachid BENHIDA, Rachid Daoud
 version: 1.0.1
 date-released: 2026-09-16
 license: MIT
