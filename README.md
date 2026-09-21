@@ -1,6 +1,6 @@
 # ENZTRA
 
-**ENZTRA** (Enzyme Redesign and Triage Automation) is a reference-guided
+**ENZTRA** (ENzyme redesign and TRiage Automation) is a reference-guided
 workflow for enzyme redesign, kinetic triage, and structural analysis.
 
 ENZTRA is being developed to connect four independent scientific tools without
