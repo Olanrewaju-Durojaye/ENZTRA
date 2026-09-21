@@ -1,6 +1,6 @@
 # ENZTRA
 
-<img width="1230" height="1278" alt="ENZTRA_Logo" src="https://github.com/user-attachments/assets/811250b1-574c-4afe-913b-07e438e28534" />
+<img width="6000" height="3375" alt="ENZTRA_Logo_Redesigned" src="https://github.com/user-attachments/assets/79a00209-390f-439e-8e68-93f568ab3a3e" />
 
 **ENZTRA** (ENzyme redesign and TRiage Automation) is a reference-guided
 workflow for enzyme redesign, kinetic triage, and structural analysis.
