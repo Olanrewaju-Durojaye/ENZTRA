@@ -877,7 +877,7 @@ Do not publish credentials, private paths containing sensitive information, acce
 ---
 
 ## For questions
-please contact the corresponding authors:
+Please contact the corresponding authors:
 
 Corresponding authors:
     Olanrewaju Ayodeji Durojaye;
