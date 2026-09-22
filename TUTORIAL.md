@@ -873,3 +873,21 @@ When opening a GitHub issue, include:
 - the smallest reproducible example that does not expose confidential data.
 
 Do not publish credentials, private paths containing sensitive information, access tokens, or licensed model weights.
+
+---
+
+## For questions
+please contact the corresponding authors:
+
+Corresponding authors:
+    Olanrewaju Ayodeji Durojaye
+    Rachid Daoud
+
+Institution:
+    Chemical and Biochemical Sciences, Green Process Engineering,
+    University Mohammed VI Polytechnic,
+    43150 Ben Guerir, Morocco
+
+Email:
+    olanrewaju.ayodeji-durojaye-ext@um6p.ma
+    rachid.daoud@um6p.ma
