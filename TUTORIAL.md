@@ -880,7 +880,7 @@ Do not publish credentials, private paths containing sensitive information, acce
 please contact the corresponding authors:
 
 Corresponding authors:
-    Olanrewaju Ayodeji Durojaye
+    Olanrewaju Ayodeji Durojaye;
     Rachid Daoud
 
 Institution:
@@ -889,5 +889,5 @@ Institution:
     43150 Ben Guerir, Morocco
 
 Email:
-    olanrewaju.ayodeji-durojaye-ext@um6p.ma
+    olanrewaju.ayodeji-durojaye-ext@um6p.ma;
     rachid.daoud@um6p.ma
