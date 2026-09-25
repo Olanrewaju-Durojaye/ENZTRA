@@ -162,6 +162,10 @@ article when available and cite every external scientific tool used in the
 analysis. Repository citation metadata are provided in
 **[CITATION.cff](CITATION.cff)**.
 
+## Zenodo record citation
+
+Durojaye, O. A., EL HADAD, S., Benhida, R., & Daoud, R. (2026). ENZTRA demonstration dataset: reference-guided phytase redesign and kinetic-structural triage [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22836909
+
 ## License
 
 ENZTRA's original orchestration code is released under the
