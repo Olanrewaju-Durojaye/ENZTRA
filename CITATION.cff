@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use ENZTRA, please cite the software release and associated publication."
-title: "ENZTRA: Enzyme Redesign and Triage Automation"
+title: "ENZTRA: ENZyme redesign and TRiage Automation"
 type: software
 authors:
   - Olanrewaju Ayodeji Durojaye, Salaheddine EL HADAD, Rachid BENHIDA, Rachid Daoud
